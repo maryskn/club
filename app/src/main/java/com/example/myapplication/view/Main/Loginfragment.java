@@ -1,4 +1,4 @@
-package com.example.myapplication.view.main.Main;
+package com.example.myapplication.view.Main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,8 +9,6 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 

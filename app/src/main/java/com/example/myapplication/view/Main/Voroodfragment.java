@@ -1,4 +1,4 @@
-package com.example.myapplication.view.main;
+package com.example.myapplication.view.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,8 +20,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.myapplication.R;
-import com.example.myapplication.view.main.Main.AccountActivity;
-import com.example.myapplication.view.main.Main.SignIn;
+import com.example.myapplication.view.MyViewModel;
+import com.example.myapplication.view.account.AccountActivity;
 
 public class Voroodfragment extends Fragment implements SignIn {
     private EditText name, pass;

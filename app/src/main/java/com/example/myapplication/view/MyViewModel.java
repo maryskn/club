@@ -1,16 +1,16 @@
-package com.example.myapplication.view.main;
+package com.example.myapplication.view;
 
 import androidx.lifecycle.ViewModel;
 
 import com.example.myapplication.model.DB.User;
 import com.example.myapplication.model.Myrepository;
-import com.example.myapplication.view.main.Main.SignIn;
+import com.example.myapplication.view.Main.SignIn;
 
 import java.util.List;
 
 public class MyViewModel extends ViewModel {
-    Myrepository myrepository;
-    SignIn signIn;
+   public Myrepository myrepository;
+   public SignIn signIn;
 
     public MyViewModel() {
         signIn = null;

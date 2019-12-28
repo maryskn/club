@@ -1,4 +1,4 @@
-package com.example.myapplication.view.main.Main;
+package com.example.myapplication.view.account;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,11 +11,12 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
 
-public class Verificationfragment extends Fragment {
+public class Item5fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.verification_fragment,container,false);
+        View view=getLayoutInflater().inflate(R.layout.item5fragment,container,false);
         return view;
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.myapplication.view.main.Main;
+package com.example.myapplication.view.Main;
 
 public interface SignIn {
     void onSuccess(String s);

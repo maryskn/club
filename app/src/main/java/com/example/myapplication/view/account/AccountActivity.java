@@ -1,4 +1,4 @@
-package com.example.myapplication.view.main.Main;
+package com.example.myapplication.view.account;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;

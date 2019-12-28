@@ -10,10 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.main.Main.AccountActivity"/>
-        <activity android:name=".view.main.Main.Main2Activity"
+        <activity android:name=".view.account.AccountActivity"/>
+        <activity android:name=".view.Main.Main2Activity"
             android:windowSoftInputMode="stateAlwaysHidden"/>
-        <activity android:name=".view.main.Main.MainActivity">
+        <activity android:name=".view.Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

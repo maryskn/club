@@ -1,4 +1,4 @@
-package com.example.myapplication.view.main.Menu;
+package com.example.myapplication.view.account;
 
         import android.os.Bundle;
         import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.example.myapplication.view.main.Menu;
+package com.example.myapplication.view.account;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
 
-public class Item2fragment extends Fragment {
+public class Item1fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=getLayoutInflater().inflate(R.layout.item2fragment,container,false);
+        View view=getLayoutInflater().inflate(R.layout.item1fragment,container,false);
         return view;
     }
 }
