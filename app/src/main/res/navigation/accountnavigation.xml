@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/accountnavigation"
+    app:startDestination="@id/accountFragment">
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.myapplication.view.main.Main.AccountFragment"
+        android:label="AccountFragment" >
+        <action
+            android:id="@+id/action_accountFragment_to_item1fragment"
+            app:destination="@id/item1fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item2fragment"
+            app:destination="@id/item2fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item9fragment"
+            app:destination="@id/item9fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item7fragment"
+            app:destination="@id/item7fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item2fragment2"
+            app:destination="@id/item2fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item2fragment3"
+            app:destination="@id/item2fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item3fragment"
+            app:destination="@id/item3fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item4fragment"
+            app:destination="@id/item4fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item5fragment"
+            app:destination="@id/item5fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item6fragment"
+            app:destination="@id/item6fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item7fragment3"
+            app:destination="@id/item7fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item8fragment"
+            app:destination="@id/item8fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item10fragment"
+            app:destination="@id/item10fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item9fragment2"
+            app:destination="@id/item9fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item11fragment"
+            app:destination="@id/item11fragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_item10fragment2"
+            app:destination="@id/item10fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/item10fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item10fragment"
+        android:label="item10fragment"
+        tools:layout="@layout/item10fragment" />
+    <fragment
+        android:id="@+id/item11fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item11fragment"
+        android:label="item11fragment"
+        tools:layout="@layout/item11fragment" />
+    <fragment
+        android:id="@+id/item1fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item1fragment"
+        android:label="item1fragment"
+        tools:layout="@layout/item1fragment" />
+    <fragment
+        android:id="@+id/item2fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item2fragment"
+        android:label="item2fragment"
+        tools:layout="@layout/item2fragment" />
+    <fragment
+        android:id="@+id/item3fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item3fragment"
+        android:label="item3fragment"
+        tools:layout="@layout/item3fragment" />
+    <fragment
+        android:id="@+id/item4fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item4fragment"
+        android:label="item4fragment"
+        tools:layout="@layout/item4fragment" />
+    <fragment
+        android:id="@+id/item5fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item5fragment"
+        android:label="item5fragment"
+        tools:layout="@layout/item5fragment" />
+    <fragment
+        android:id="@+id/item6fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item6fragment"
+        android:label="item6fragment"
+        tools:layout="@layout/item6fragment" />
+    <fragment
+        android:id="@+id/item7fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item7fragment"
+        android:label="item7fragment"
+        tools:layout="@layout/item7fragment" />
+    <fragment
+        android:id="@+id/item8fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item8fragment"
+        android:label="item8fragment"
+        tools:layout="@layout/item8fragment" />
+    <fragment
+        android:id="@+id/item9fragment"
+        android:name="com.example.myapplication.view.main.Menu.Item9fragment"
+        android:label="item9fragment"
+        tools:layout="@layout/item9fragment" />
+</navigation>

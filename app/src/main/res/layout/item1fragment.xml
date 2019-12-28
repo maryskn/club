@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/Tname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="8dp"
+        android:drawableRight="@drawable/user_copy"
+        android:fontFamily="@font/font"
+        android:text=" نام کاربری : "
+        android:textColor="@color/darkblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:drawableRight="@drawable/smartphone_1"
+        android:fontFamily="@font/font"
+        android:text=" تلفن همراه :"
+        android:textColor="@color/darkblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/national"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:drawableRight="@drawable/group_6"
+        android:fontFamily="@font/font"
+        android:text=" کد ملی :"
+        android:textColor="@color/darkblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/number"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+    <TextView
+        android:id="@+id/customer"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:drawableRight="@drawable/user_copy"
+        android:fontFamily="@font/font"
+        android:text=" شماره مشتری :"
+        android:textColor="@color/darkblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/national"
+        app:layout_constraintTop_toBottomOf="@+id/national" />
+
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:drawableRight="@drawable/at"
+        android:fontFamily="@font/font"
+        android:text=" ایمیل :"
+        android:textColor="@color/darkblue"
+        app:layout_constraintBottom_toTopOf="@+id/changename"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/customer"
+        app:layout_constraintTop_toBottomOf="@+id/customer"
+        app:layout_constraintVertical_bias="0.191" />
+
+    <TextView
+        android:id="@+id/Tname"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/font"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toStartOf="@+id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/Tnumber"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/font"
+        app:layout_constraintBottom_toBottomOf="@+id/number"
+        app:layout_constraintEnd_toStartOf="@+id/number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/Tnational"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/font"
+
+        app:layout_constraintBottom_toBottomOf="@+id/national"
+        app:layout_constraintEnd_toStartOf="@+id/national"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+
+    <TextView
+        android:id="@+id/Tcustomer"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/font"
+        app:layout_constraintBottom_toTopOf="@+id/Temail"
+        app:layout_constraintEnd_toStartOf="@+id/customer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/national" />
+
+    <TextView
+        android:id="@+id/Temail"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+
+        android:fontFamily="@font/font"
+        app:layout_constraintBottom_toBottomOf="@+id/email"
+        app:layout_constraintEnd_toStartOf="@+id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customer" />
+
+    <Button
+        android:id="@+id/changepass"
+        android:layout_width="149dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/button2"
+        android:fontFamily="@font/font"
+        android:text="  تغییر نام کاربری  "
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/changename"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/changename"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/changename"
+        android:layout_width="149dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="168dp"
+        android:background="@drawable/changepass"
+        android:fontFamily="@font/font"
+        android:text="  تغییر رمز عبور  "
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toEndOf="@+id/changepass" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

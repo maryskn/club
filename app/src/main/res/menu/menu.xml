@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item1"
+        android:title=" پروفایل"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/user1"
+        />
+    <item
+        android:id="@+id/item2"
+        android:title=" مدیریت کارت های بانکی"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/iconfinder_credit_card_debit_payment_2203532"
+        />
+    <item
+        android:id="@+id/item3"
+        android:title=" جشنواره ها"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/gift_4"
+        />
+    <item
+        android:id="@+id/item4"
+        android:title=" خدمات ویژه"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/reception"
+        />
+    <item
+        android:id="@+id/item5"
+        android:title=" گزارش ریز امتیازات"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/statistics"
+        />
+    <item
+        android:id="@+id/item6"
+        android:title=" اخبار و اطلاعیه ها"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/megaphone"
+        />
+    <item
+        android:id="@+id/item7"
+        android:title=" دعوت از دوستان"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/add_user"
+        />
+    <item
+        android:id="@+id/item8"
+        android:title=" نحوه ی امتیازدهی"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/star_3"
+        />
+    <item
+        android:id="@+id/item9"
+        android:title=" پشتیبانی"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/customer_service"
+        />
+    <item
+        android:id="@+id/item10"
+        android:title=" درباره ی ما"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/about_us"
+        />
+    <item
+        android:id="@+id/item11"
+        android:title=" خروج"
+        android:fontFamily="@font/font"
+        android:icon="@drawable/sign_out_option"
+        />
+
+</menu>

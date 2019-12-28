@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginfragment">
+
+    <fragment
+        android:id="@+id/loginfragment"
+        android:name="com.example.myapplication.view.main.Main.Loginfragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginfragment_to_voroodfragment"
+            app:destination="@id/voroodfragment" />
+        <action
+            android:id="@+id/action_loginfragment_to_signupfragment"
+            app:destination="@id/signupfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/voroodfragment"
+        android:name="com.example.myapplication.view.main.Voroodfragment"
+        android:label="vorood_fragment"
+        tools:layout="@layout/vorood_fragment" >
+        <action
+            android:id="@+id/action_voroodfragment_to_acountFragment"
+            app:destination="@id/acountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupfragment"
+        android:name="com.example.myapplication.view.main.Main.Signupfragment"
+        android:label="Signupfragment" >
+        <action
+            android:id="@+id/action_signupfragment_to_verificationfragment"
+            app:destination="@id/verificationfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationfragment"
+        android:name="com.example.myapplication.view.main.Main.Verificationfragment"
+        android:label="Verificationfragment" />
+    <fragment
+        android:id="@+id/acountFragment"
+        android:name="com.example.myapplication.view.main.AcountFragment"
+        android:label="AcountFragment" />
+</navigation>
