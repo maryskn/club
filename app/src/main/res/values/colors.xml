@@ -9,5 +9,6 @@
     <color name="greenblue">#1dbaa7</color>
     <color name="gray">#eeeff1</color>
     <color name="blue">#47bcd5</color>
+    <color name="black">#000000</color>
     <color name="darkblue">#6b7d90</color>
 </resources>

@@ -22,10 +22,10 @@
         android:layout_width="133dp"
         android:layout_height="40dp"
         android:layout_marginTop="204dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="48dp"
         android:drawableRight="@drawable/user_copy"
         android:fontFamily="@font/font"
-        android:text=" نام کاربری : "
+        android:text="  نام کاربری : "
         android:textColor="@color/darkblue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,7 @@
         android:layout_marginTop="28dp"
         android:drawableRight="@drawable/smartphone_1"
         android:fontFamily="@font/font"
-        android:text=" تلفن همراه :"
+        android:text="  تلفن همراه :"
         android:textColor="@color/darkblue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -48,30 +48,30 @@
         android:id="@+id/national"
         android:layout_width="133dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:drawableRight="@drawable/group_6"
         android:fontFamily="@font/font"
-        android:text=" کد ملی :"
+        android:text="  کد ملی :"
         android:textColor="@color/darkblue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/number"
         app:layout_constraintTop_toBottomOf="@+id/number" />
 
+
     <TextView
         android:id="@+id/customer"
         android:layout_width="133dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:drawableRight="@drawable/user_copy"
         android:fontFamily="@font/font"
-        android:text=" شماره مشتری :"
+        android:text="  شماره مشتری :"
         android:textColor="@color/darkblue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/national"
         app:layout_constraintTop_toBottomOf="@+id/national" />
-
 
     <TextView
         android:id="@+id/email"
@@ -79,14 +79,14 @@
         android:layout_height="40dp"
         android:drawableRight="@drawable/at"
         android:fontFamily="@font/font"
-        android:text=" ایمیل :"
+        android:text="  ایمیل :"
         android:textColor="@color/darkblue"
         app:layout_constraintBottom_toTopOf="@+id/changename"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/customer"
         app:layout_constraintTop_toBottomOf="@+id/customer"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintVertical_bias="0.099" />
 
     <TextView
         android:id="@+id/Tname"

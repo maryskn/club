@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
 
-public class Item8fragment extends Fragment {
+public class InviteFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=getLayoutInflater().inflate(R.layout.item8fragment,container,false);
+        View view=getLayoutInflater().inflate(R.layout.item7fragment,container,false);
         return view;
     }
 }

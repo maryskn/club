@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
 
-public class Item7fragment extends Fragment {
+public class Exit extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=getLayoutInflater().inflate(R.layout.item7fragment,container,false);
+        View view=getLayoutInflater().inflate(R.layout.item11fragment,container,false);
         return view;
     }
 }

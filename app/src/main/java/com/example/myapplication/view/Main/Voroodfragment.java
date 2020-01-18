@@ -1,5 +1,6 @@
 package com.example.myapplication.view.Main;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
@@ -64,6 +65,20 @@ public class Voroodfragment extends Fragment implements SignIn {
 
                 myviewmodel.login(userName, password);
 
+            }
+        });
+
+
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog dialog=new Dialog(getActivity());
+                dialog.setContentView(R.layout.forget_pass_dialog_layout);
+
+
+
+
+                dialog.show();
             }
         });
 

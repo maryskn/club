@@ -84,7 +84,7 @@ public class AccountActivity extends AppCompatActivity implements NavigationView
         }
         if (menuItem.getItemId() == R.id.item11) {
             drawerLayout.closeDrawers();
-            navController.navigate(R.id.action_accountFragment_to_item11fragment);
+            finish();
         }
         return false;
 

@@ -11,7 +11,7 @@ package com.example.myapplication.view.account;
 
         import com.example.myapplication.R;
 
-public class Item10fragment extends Fragment {
+public class AboutUsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
