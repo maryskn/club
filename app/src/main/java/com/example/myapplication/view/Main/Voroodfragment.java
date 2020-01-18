@@ -18,9 +18,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.myapplication.R;
+import com.example.myapplication.model.remote.dto.LoginResponseModel;
 import com.example.myapplication.view.MyViewModel;
 import com.example.myapplication.view.account.AccountActivity;
 
@@ -65,6 +67,15 @@ public class Voroodfragment extends Fragment implements SignIn {
 
                 myviewmodel.login(userName, password);
 
+                myviewmodel.getLoginResponseModelLiveData().observe(getActivity(), new Observer<LoginResponseModel>() {
+                    @Override
+                    public void onChanged(LoginResponseModel responseModel) {
+                        if (responseModel != null)
+                            Toast.makeText(getActivity(), responseModel.getResult(), Toast.LENGTH_LONG).show();
+                    }
+                });
+
+
             }
         });
 
@@ -72,10 +83,8 @@ public class Voroodfragment extends Fragment implements SignIn {
         forget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dialog dialog=new Dialog(getActivity());
+                Dialog dialog = new Dialog(getActivity());
                 dialog.setContentView(R.layout.forget_pass_dialog_layout);
-
-
 
 
                 dialog.show();
@@ -88,7 +97,7 @@ public class Voroodfragment extends Fragment implements SignIn {
     @Override
     public void onSuccess(String s) {
         //TODO define Intent
-        Intent account=new Intent(getActivity(), AccountActivity.class);
+        Intent account = new Intent(getActivity(), AccountActivity.class);
         startActivity(account);
         //Navigation.findNavController(view).navigate(R.id.action_voroodfragment_to_acountFragment);
         Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();

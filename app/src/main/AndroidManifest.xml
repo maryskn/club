@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -10,9 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.account.AccountActivity"/>
-        <activity android:name=".view.Main.Main2Activity"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".view.account.AccountActivity" />
+        <activity
+            android:name=".view.Main.Main2Activity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".view.Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
