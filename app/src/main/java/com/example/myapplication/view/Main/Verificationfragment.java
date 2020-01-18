@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
 
 import com.example.myapplication.R;
 import com.example.myapplication.view.MyViewModel;
@@ -19,10 +20,11 @@ import com.example.myapplication.view.MyViewModel;
 public class Verificationfragment extends Fragment implements Verification{
     EditText phonenum , username , password , againpassword;
     Button sendmessage;
+    View view;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.verification_fragment,container,false);
+         view=inflater.inflate(R.layout.verification_fragment,container,false);
         final MyViewModel myviewmodel = ViewModelProviders.of(this).get(MyViewModel.class);
         myviewmodel.verification = Verificationfragment.this;
         phonenum=view.findViewById(R.id.phone);
@@ -38,7 +40,8 @@ public class Verificationfragment extends Fragment implements Verification{
                 String pass = password.getText().toString();
                 String againpass = againpassword.getText().toString();
 
-                myviewmodel.sendMessage(phone, user,pass,againpass);
+                myviewmodel.Register(phone,user,pass,againpass);
+
 
             }
         });
@@ -47,6 +50,7 @@ public class Verificationfragment extends Fragment implements Verification{
 
     @Override
     public void onSuccess(String s) {
+       //Navigation.findNavController(view).navigate(R.id.action_verificationfragment_to_secondVerificationFragment);
         Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
 
     }

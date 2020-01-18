@@ -37,9 +37,18 @@
     <fragment
         android:id="@+id/verificationfragment"
         android:name="com.example.myapplication.view.Main.Verificationfragment"
-        android:label="Verificationfragment" />
+        android:label="Verificationfragment" >
+        <action
+            android:id="@+id/action_verificationfragment_to_secondVerificationFragment"
+            app:destination="@id/secondVerificationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/acountFragment"
         android:name="com.example.myapplication.view.main.AcountFragment"
         android:label="AcountFragment" />
+    <fragment
+        android:id="@+id/secondVerificationFragment"
+        android:name="com.example.myapplication.view.Main.SecondVerificationFragment"
+        android:label="secondverification_fragment"
+        tools:layout="@layout/secondverification_fragment" />
 </navigation>

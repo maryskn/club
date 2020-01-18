@@ -12,6 +12,7 @@ import com.example.myapplication.model.remote.ApiRequest;
 import com.example.myapplication.model.remote.RetrofitRequest;
 import com.example.myapplication.model.remote.dto.LoginRequestModel;
 import com.example.myapplication.model.remote.dto.LoginResponseModel;
+import com.example.myapplication.model.remote.dto.RegisterRequestModel;
 
 import java.util.List;
 
@@ -36,6 +37,33 @@ public class Myrepository {
 
         final MutableLiveData<LoginResponseModel> data = new MutableLiveData<>();
         apiRequest.userLogin(new LoginRequestModel(password, username))
+                .enqueue(new Callback<LoginResponseModel>() {
+
+                    @Override
+                    public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
+                        Log.d("TAG", "onResponse response:: " + response);
+
+                        if (response.body() != null) {
+                            data.setValue(response.body());
+
+                            Log.d("TAG", "result:: " + response.body().getResult());
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<LoginResponseModel> call, Throwable t) {
+                        data.setValue(null);
+                    }
+                });
+        return data;
+
+    }
+
+    public LiveData<LoginResponseModel> Register(String phone, String name, String pass, String pass2) {
+
+        final MutableLiveData<LoginResponseModel> data = new MutableLiveData<>();
+        apiRequest.userRegister(new RegisterRequestModel(phone,name, pass,pass2))
                 .enqueue(new Callback<LoginResponseModel>() {
 
                     @Override

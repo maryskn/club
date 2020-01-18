@@ -31,7 +31,6 @@ public class Voroodfragment extends Fragment implements SignIn {
     private Button voorood;
     private TextView forget;
     private CheckBox checkBox;
-
     View view;
 
     @Nullable
@@ -85,7 +84,6 @@ public class Voroodfragment extends Fragment implements SignIn {
             public void onClick(View v) {
                 Dialog dialog = new Dialog(getActivity());
                 dialog.setContentView(R.layout.forget_pass_dialog_layout);
-
 
                 dialog.show();
             }

@@ -34,18 +34,37 @@ public class MyViewModel extends ViewModel {
 
     }
 
+
     public LiveData<LoginResponseModel> getLoginResponseModelLiveData() {
         return loginResponseModelLiveData;
     }
 
-    public void sendMessage(String phone, String name, String pass, String pass2) {
+    public void Register(String phone, String name, String pass, String pass2) {
         if (phone.equals("") || name.equals("") || pass.equals("") || pass2.equals("")) {
             verification.onError("لطفا اطلاعات را وارد کنید");
             return;
-        } else {
+        }
+
+        else
+        {
             verification.onSuccess("کد فعال سازی ارسال شد");
+            myrepository.Register(phone, name, pass, pass2);
 
         }
+
+    }
+    public void signUp(String nationalcode, String customernum, String email, String referenceCode) {
+        if (nationalcode.equals("") || email.equals("")) {
+            verification.onError("لطفا اطلاعات را وارد کنید");
+            return;
+        }
+
+        else
+        {
+            verification.onSuccess("");
+            myrepository.Register(nationalcode, customernum, email, referenceCode);
+        }
+
     }
 
     public List<User> getUser() {
