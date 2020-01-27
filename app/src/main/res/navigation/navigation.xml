@@ -9,7 +9,7 @@
         android:id="@+id/loginfragment"
         android:name="com.example.myapplication.ui.Auth.fragment.SelectFragment"
         android:label="login_fragment"
-        tools:layout="@layout/login_fragment" >
+        tools:layout="@layout/auth_fragment" >
         <action
             android:id="@+id/action_loginfragment_to_voroodfragment"
             app:destination="@id/voroodfragment" />
@@ -22,7 +22,7 @@
         android:id="@+id/voroodfragment"
         android:name="com.example.myapplication.ui.Auth.fragment.LoginFragment"
         android:label="vorood_fragment"
-        tools:layout="@layout/vorood_fragment" >
+        tools:layout="@layout/login_fragment" >
         <action
             android:id="@+id/action_voroodfragment_to_acountFragment"
             app:destination="@id/acountFragment" />

@@ -44,7 +44,7 @@ public class LoginFragment extends Fragment implements SignIn {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.vorood_fragment, container, false);
+        view = inflater.inflate(R.layout.login_fragment, container, false);
         final MyViewModel myviewmodel = ViewModelProviders.of(this).get(MyViewModel.class);
         myviewmodel.signIn = LoginFragment.this;
         Accept = view.findViewById(R.id.accept);

@@ -15,7 +15,7 @@ public class ReportFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=getLayoutInflater().inflate(R.layout.item5fragment,container,false);
+        View view=getLayoutInflater().inflate(R.layout.report_fragment,container,false);
         return view;
     }
 

@@ -15,7 +15,7 @@ public class InviteFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=getLayoutInflater().inflate(R.layout.item7fragment,container,false);
+        View view=getLayoutInflater().inflate(R.layout.invite_fragment,container,false);
         return view;
     }
 }

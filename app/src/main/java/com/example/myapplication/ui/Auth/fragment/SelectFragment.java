@@ -21,7 +21,7 @@ public class SelectFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.login_fragment, container, false);
+        View view = inflater.inflate(R.layout.auth_fragment, container, false);
         login=view.findViewById(R.id.vorood);
         signup=view.findViewById(R.id.sabtenam);
 

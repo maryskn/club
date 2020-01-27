@@ -15,7 +15,7 @@ public class Exit extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=getLayoutInflater().inflate(R.layout.item11fragment,container,false);
+        View view=getLayoutInflater().inflate(R.layout.exit,container,false);
         return view;
     }
 }

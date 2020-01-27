@@ -15,7 +15,7 @@ public class SupportFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=getLayoutInflater().inflate(R.layout.item9fragment,container,false);
+        View view=getLayoutInflater().inflate(R.layout.support_fragment,container,false);
         return view;
     }
 }

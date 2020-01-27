@@ -12,8 +12,8 @@
         android:id="@+id/profile"
         android:layout_width="118dp"
         android:layout_height="107dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/userplaceholder"
-        app:layout_constraintBottom_toTopOf="@+id/Tname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,57 +22,52 @@
         android:id="@+id/name"
         android:layout_width="133dp"
         android:layout_height="40dp"
-        android:layout_marginTop="204dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="50dp"
         android:drawableRight="@drawable/user_copy"
         android:fontFamily="@font/font"
         android:text="  نام کاربری : "
         android:textColor="@color/darkblue"
+        app:layout_constraintBottom_toTopOf="@+id/number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89" />
 
     <TextView
         android:id="@+id/number"
         android:layout_width="133dp"
         android:layout_height="40dp"
-        android:layout_marginTop="28dp"
         android:drawableRight="@drawable/smartphone_1"
         android:fontFamily="@font/font"
         android:text="  تلفن همراه :"
         android:textColor="@color/darkblue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@+id/name"
         app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        tools:layout_editor_absoluteY="272dp" />
 
     <TextView
         android:id="@+id/national"
         android:layout_width="133dp"
         android:layout_height="40dp"
-        android:layout_marginTop="18dp"
         android:drawableRight="@drawable/group_6"
         android:fontFamily="@font/font"
         android:text="  کد ملی :"
         android:textColor="@color/darkblue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/number"
-        app:layout_constraintTop_toBottomOf="@+id/number" />
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        tools:layout_editor_absoluteY="330dp" />
 
 
     <TextView
         android:id="@+id/customer"
         android:layout_width="133dp"
         android:layout_height="40dp"
-        android:layout_marginTop="12dp"
         android:drawableRight="@drawable/user_copy"
         android:fontFamily="@font/font"
         android:text="  شماره مشتری :"
         android:textColor="@color/darkblue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/national"
-        app:layout_constraintTop_toBottomOf="@+id/national" />
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        tools:layout_editor_absoluteY="382dp" />
 
     <TextView
         android:id="@+id/email"
@@ -82,32 +77,32 @@
         android:fontFamily="@font/font"
         android:text="  ایمیل :"
         android:textColor="@color/darkblue"
-        app:layout_constraintBottom_toTopOf="@+id/CHANGENAME"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/name"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/customer"
-        app:layout_constraintTop_toBottomOf="@+id/customer"
-        app:layout_constraintVertical_bias="0.099" />
+        app:layout_constraintStart_toStartOf="@+id/name"
+        tools:layout_editor_absoluteY="436dp" />
 
     <TextView
         android:id="@+id/Tname"
         android:layout_width="133dp"
         android:layout_height="40dp"
+        android:layout_marginStart="50dp"
         android:fontFamily="@font/font"
-        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintBottom_toTopOf="@+id/Tnumber"
         app:layout_constraintEnd_toStartOf="@+id/name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/name" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
 
     <TextView
         android:id="@+id/Tnumber"
         android:layout_width="133dp"
         android:layout_height="40dp"
         android:fontFamily="@font/font"
-        app:layout_constraintBottom_toBottomOf="@+id/number"
         app:layout_constraintEnd_toStartOf="@+id/number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintStart_toStartOf="@+id/Tname"
+        tools:layout_editor_absoluteY="280dp" />
+
 
     <TextView
         android:id="@+id/Tnational"
@@ -115,58 +110,55 @@
         android:layout_height="40dp"
         android:fontFamily="@font/font"
 
-        app:layout_constraintBottom_toBottomOf="@+id/national"
         app:layout_constraintEnd_toStartOf="@+id/national"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number" />
-
+        app:layout_constraintStart_toStartOf="@+id/Tname"
+        tools:layout_editor_absoluteY="342dp" />
 
     <TextView
         android:id="@+id/Tcustomer"
         android:layout_width="133dp"
         android:layout_height="40dp"
         android:fontFamily="@font/font"
-        app:layout_constraintBottom_toTopOf="@+id/Temail"
         app:layout_constraintEnd_toStartOf="@+id/customer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/national" />
+        app:layout_constraintStart_toStartOf="@+id/Tname"
+        tools:layout_editor_absoluteY="382dp" />
 
     <TextView
         android:id="@+id/Temail"
         android:layout_width="133dp"
         android:layout_height="40dp"
-
         android:fontFamily="@font/font"
-        app:layout_constraintBottom_toBottomOf="@+id/email"
-        app:layout_constraintEnd_toStartOf="@+id/email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customer" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Tname"
+        app:layout_constraintStart_toStartOf="@+id/Tname"
+        app:layout_constraintTop_toBottomOf="@+id/Tcustomer"
+        app:layout_constraintVertical_bias="0.04000002" />
 
     <Button
         android:id="@+id/CHANGENAME"
         android:layout_width="149dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginStart="40dp"
         android:background="@drawable/button2"
         android:fontFamily="@font/font"
         android:text="  تغییر نام کاربری  "
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/CHANGEPASS"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Temail" />
 
     <Button
         android:id="@+id/CHANGEPASS"
         android:layout_width="149dp"
         android:layout_height="43dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/changepass"
         android:fontFamily="@font/font"
         android:text="  تغییر رمز عبور  "
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintVertical_bias="0.501" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -62,12 +62,12 @@
         android:id="@+id/item10fragment"
         android:name="com.example.myapplication.ui.Main.fragment.AboutUsFragment"
         android:label="item10fragment"
-        tools:layout="@layout/item10fragment" />
+        tools:layout="@layout/aboutus_fragment" />
     <fragment
         android:id="@+id/item11fragment"
         android:name="com.example.myapplication.ui.Main.fragment.Exit"
         android:label="item11fragment"
-        tools:layout="@layout/item11fragment" />
+        tools:layout="@layout/exit" />
     <fragment
         android:id="@+id/item1fragment"
         android:name="com.example.myapplication.ui.Main.fragment.ProfileFragment"
@@ -87,30 +87,30 @@
         android:id="@+id/item4fragment"
         android:name="com.example.myapplication.ui.Main.fragment.ServisFragment"
         android:label="item4fragment"
-        tools:layout="@layout/item4fragment" />
+        tools:layout="@layout/servis_fragment" />
     <fragment
         android:id="@+id/item5fragment"
         android:name="com.example.myapplication.ui.Main.fragment.ReportFragment"
         android:label="item5fragment"
-        tools:layout="@layout/item5fragment" />
+        tools:layout="@layout/report_fragment" />
     <fragment
         android:id="@+id/item6fragment"
         android:name="com.example.myapplication.ui.Main.fragment.NewsFragment"
         android:label="item6fragment"
-        tools:layout="@layout/item6fragment" />
+        tools:layout="@layout/news_fragment" />
     <fragment
         android:id="@+id/item7fragment"
         android:name="com.example.myapplication.ui.Main.fragment.InviteFragment"
         android:label="item7fragment"
-        tools:layout="@layout/item7fragment" />
+        tools:layout="@layout/invite_fragment" />
     <fragment
         android:id="@+id/item8fragment"
         android:name="com.example.myapplication.ui.Main.fragment.StarFragment"
         android:label="item8fragment"
-        tools:layout="@layout/item8fragment" />
+        tools:layout="@layout/star_fragment" />
     <fragment
         android:id="@+id/item9fragment"
         android:name="com.example.myapplication.ui.Main.fragment.SupportFragment"
         android:label="item9fragment"
-        tools:layout="@layout/item9fragment" />
+        tools:layout="@layout/support_fragment" />
 </navigation>
