@@ -8,10 +8,11 @@
     android:layout_height="match_parent"
     android:background="@color/gray">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="118dp"
+        android:layout_height="107dp"
+        android:src="@drawable/userplaceholder"
         app:layout_constraintBottom_toTopOf="@+id/Tname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,12 +146,14 @@
         android:id="@+id/CHANGENAME"
         android:layout_width="149dp"
         android:layout_height="43dp"
+        android:layout_marginBottom="132dp"
         android:background="@drawable/button2"
         android:fontFamily="@font/font"
         android:text="  تغییر نام کاربری  "
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="619dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/CHANGEPASS"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/CHANGEPASS"
@@ -160,7 +163,10 @@
         android:fontFamily="@font/font"
         android:text="  تغییر رمز عبور  "
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="619dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

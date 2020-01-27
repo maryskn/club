@@ -5,8 +5,8 @@ import android.util.Log;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.myapplication.model.DB.AppDataBase;
-import com.example.myapplication.model.DB.User;
+import com.example.myapplication.model.db.AppDataBase;
+import com.example.myapplication.model.db.User;
 import com.example.myapplication.model.prefence.Myprefence;
 import com.example.myapplication.model.remote.ApiRequest;
 import com.example.myapplication.model.remote.RetrofitRequest;
@@ -16,6 +16,7 @@ import com.example.myapplication.model.remote.dto.RegisterRequestModel;
 
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -33,28 +34,23 @@ public class Myrepository {
         AppDataBase.getAppDatabase().userDao().insert(user);
     }
 
-    public LiveData<LoginResponseModel> login(String username, String password) {
+    public LiveData<Response<ResponseBody>> login(String username, String password) {
 
-        final MutableLiveData<LoginResponseModel> data = new MutableLiveData<>();
+        final MutableLiveData<Response<ResponseBody>> data = new MutableLiveData<>();
+
         apiRequest.userLogin(new LoginRequestModel(password, username))
-                .enqueue(new Callback<LoginResponseModel>() {
+                .enqueue(new Callback<ResponseBody>() {
 
                     @Override
-                    public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
-                        Log.w("TAG", "onResponse response:: " + response);
-
-                        if (response.body() != null) {
-                            data.setValue(response.body());
-
-                            Log.w("TAG", "result:: "+ response.body().getResult());
-
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        if (response != null) {
+                            data.setValue(response);
                         }
                     }
 
                     @Override
-                    public void onFailure(Call<LoginResponseModel> call, Throwable t) {
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
                         data.setValue(null);
-                        Log.w("TAG", "fail ");
                     }
                 });
         return data;
@@ -64,7 +60,7 @@ public class Myrepository {
     public LiveData<LoginResponseModel> Register(String phone, String nationalcode, String pass, String pass2) {
 
         final MutableLiveData<LoginResponseModel> data = new MutableLiveData<>();
-        apiRequest.userRegister(new RegisterRequestModel(phone,nationalcode, pass,pass2))
+        apiRequest.userRegister(new RegisterRequestModel(phone, nationalcode, pass, pass2))
                 .enqueue(new Callback<LoginResponseModel>() {
 
                     @Override
@@ -82,8 +78,8 @@ public class Myrepository {
                     @Override
                     public void onFailure(Call<LoginResponseModel> call, Throwable t) {
                         data.setValue(null);
-                        Log.w("TAG", "result:: " );
-                }
+                        Log.w("TAG", "result:: ");
+                    }
                 });
         return data;
 
@@ -92,5 +88,13 @@ public class Myrepository {
     public List<User> getUser() {
         return AppDataBase.getAppDatabase().userDao().getAll();
 
+    }
+
+    public void saveToken(String token) {
+        myprefence.saveToken(token);
+    }
+
+    public String getToken() {
+       return myprefence.getToken();
     }
 }

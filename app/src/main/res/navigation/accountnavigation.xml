@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/accountFragment"
-        android:name="com.example.myapplication.view.account.AccountFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.AccountFragment"
         android:label="AccountFragment" >
         <action
             android:id="@+id/action_accountFragment_to_item1fragment"
@@ -60,57 +60,57 @@
     </fragment>
     <fragment
         android:id="@+id/item10fragment"
-        android:name="com.example.myapplication.view.account.AboutUsFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.AboutUsFragment"
         android:label="item10fragment"
         tools:layout="@layout/item10fragment" />
     <fragment
         android:id="@+id/item11fragment"
-        android:name="com.example.myapplication.view.account.Exit"
+        android:name="com.example.myapplication.ui.Main.fragment.Exit"
         android:label="item11fragment"
         tools:layout="@layout/item11fragment" />
     <fragment
         android:id="@+id/item1fragment"
-        android:name="com.example.myapplication.view.account.ProfileFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.ProfileFragment"
         android:label="item1fragment"
         tools:layout="@layout/profilefragment" />
     <fragment
         android:id="@+id/item2fragment"
-        android:name="com.example.myapplication.view.account.ManagecardFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.ManagecardFragment"
         android:label="item2fragment"
         tools:layout="@layout/managecardfragment" />
     <fragment
         android:id="@+id/item3fragment"
-        android:name="com.example.myapplication.view.account.CarnivalFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.CarnivalFragment"
         android:label="item3fragment"
         tools:layout="@layout/carnival_fragment" />
     <fragment
         android:id="@+id/item4fragment"
-        android:name="com.example.myapplication.view.account.ServisFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.ServisFragment"
         android:label="item4fragment"
         tools:layout="@layout/item4fragment" />
     <fragment
         android:id="@+id/item5fragment"
-        android:name="com.example.myapplication.view.account.ReportFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.ReportFragment"
         android:label="item5fragment"
         tools:layout="@layout/item5fragment" />
     <fragment
         android:id="@+id/item6fragment"
-        android:name="com.example.myapplication.view.account.NewsFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.NewsFragment"
         android:label="item6fragment"
         tools:layout="@layout/item6fragment" />
     <fragment
         android:id="@+id/item7fragment"
-        android:name="com.example.myapplication.view.account.InviteFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.InviteFragment"
         android:label="item7fragment"
         tools:layout="@layout/item7fragment" />
     <fragment
         android:id="@+id/item8fragment"
-        android:name="com.example.myapplication.view.account.StarFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.StarFragment"
         android:label="item8fragment"
         tools:layout="@layout/item8fragment" />
     <fragment
         android:id="@+id/item9fragment"
-        android:name="com.example.myapplication.view.account.SupportFragment"
+        android:name="com.example.myapplication.ui.Main.fragment.SupportFragment"
         android:label="item9fragment"
         tools:layout="@layout/item9fragment" />
 </navigation>

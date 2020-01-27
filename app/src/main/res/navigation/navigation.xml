@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginfragment"
-        android:name="com.example.myapplication.view.Main.Loginfragment"
+        android:name="com.example.myapplication.ui.Auth.fragment.SelectFragment"
         android:label="login_fragment"
         tools:layout="@layout/login_fragment" >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/voroodfragment"
-        android:name="com.example.myapplication.view.Main.Voroodfragment"
+        android:name="com.example.myapplication.ui.Auth.fragment.LoginFragment"
         android:label="vorood_fragment"
         tools:layout="@layout/vorood_fragment" >
         <action
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/verificationfragment"
-        android:name="com.example.myapplication.view.Main.Verificationfragment"
+        android:name="com.example.myapplication.ui.Auth.fragment.Verificationfragment"
         android:label="Verificationfragment" >
         <action
             android:id="@+id/action_verificationfragment_to_secondVerificationFragment"
@@ -41,11 +41,11 @@
     </fragment>
     <fragment
         android:id="@+id/acountFragment"
-        android:name="com.example.myapplication.view.main.AcountFragment"
+        android:name="com.example.myapplication.ui.main.AcountFragment"
         android:label="AcountFragment" />
     <fragment
         android:id="@+id/secondVerificationFragment"
-        android:name="com.example.myapplication.view.Main.SecondVerificationFragment"
+        android:name="com.example.myapplication.ui.Auth.fragment.SecondVerificationFragment"
         android:label="secondverification_fragment"
         tools:layout="@layout/secondverification_fragment" />
 </navigation>

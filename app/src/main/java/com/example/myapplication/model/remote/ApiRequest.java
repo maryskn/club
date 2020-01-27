@@ -4,6 +4,7 @@ import com.example.myapplication.model.remote.dto.LoginRequestModel;
 import com.example.myapplication.model.remote.dto.LoginResponseModel;
 import com.example.myapplication.model.remote.dto.RegisterRequestModel;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Headers;
@@ -13,7 +14,7 @@ public interface ApiRequest {
 
     @Headers({"Accept: application/json"})
     @POST("user/login")
-    Call<LoginResponseModel> userLogin(@Body LoginRequestModel loginRequestModel);
+    Call<ResponseBody> userLogin(@Body LoginRequestModel loginRequestModel);
 
     @Headers({"Accept: application/json"})
     @POST("user/first-login")

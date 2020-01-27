@@ -1,116 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2323"
     android:fillViewport="true"
-    android:scrollbars = "vertical"
     android:scrollbarStyle="insideInset"
-    android:background="#2323">
+    android:scrollbars="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/vorood1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/psd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/voroodtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/font"
-        android:gravity="center"
-        android:text="باشگاه مشتریان انصار"
-        android:textColor="@color/red"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/vorood1"
-        app:layout_constraintStart_toStartOf="@+id/vorood1"
-        app:layout_constraintTop_toBottomOf="@+id/vorood1" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
 
-    <EditText
-        android:text="1000000052"
-        android:id="@+id/name"
-        android:layout_width="184dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="123dp"
-        android:layout_marginEnd="84dp"
-        android:drawableRight="@drawable/user_copy"
-        android:fontFamily="@font/font"
-        android:hint=" نام کاربری"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/voroodtext" />
+        <ImageView
+            android:id="@+id/vorood1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/psd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/voroodtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:text="باشگاه مشتریان انصار"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/vorood1"
+            app:layout_constraintStart_toStartOf="@+id/vorood1"
+            app:layout_constraintTop_toBottomOf="@+id/vorood1" />
 
 
-    <EditText
-        android:text="Aa@12345"
-        android:id="@+id/pass"
-        android:layout_width="189dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="76dp"
-        android:drawableRight="@drawable/lock"
-        android:fontFamily="@font/font"
-        android:gravity="right"
-        android:hint=" رمز عبور "
-        android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.821"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:drawableRight="@drawable/user_copy"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:hint=" نام کاربری"
+            android:text="0011003146"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/g1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/voroodtext" />
 
-    <Button
-        android:id="@+id/vorood"
-        android:layout_width="221dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="48dp"
-        android:background="@drawable/button2"
-        android:fontFamily="@font/font"
-        android:text=" ورود"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/forget"
-        app:layout_constraintEnd_toEndOf="@+id/voroodtext"
-        app:layout_constraintStart_toStartOf="@+id/voroodtext" />
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:drawableRight="@drawable/lock"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:hint=" رمز عبور "
+            android:inputType="textPassword"
+            android:text="Qaz@12345678"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/name"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
 
-    <TextView
-        android:id="@+id/forget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:fontFamily="@font/font"
-        android:onClick="forget"
-        android:text="فراموشی رمز عبور؟"
-        android:textColor="@color/greenblue"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/vorood"
+            android:layout_width="221dp"
+            android:layout_height="46dp"
+            android:background="@drawable/button2"
+            android:fontFamily="@font/font"
+            android:text=" ورود"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/pass"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="@+id/pass"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox"
+            app:layout_constraintVertical_bias="0.42000002" />
 
-    <androidx.appcompat.widget.AppCompatCheckBox
-        android:id="@+id/checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="نمایش رمز عبور"
-        app:layout_constraintBottom_toTopOf="@+id/vorood"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass" />
+        <TextView
+            android:id="@+id/forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="104dp"
+            android:fontFamily="@font/font"
+            android:onClick="forget"
+            android:text="فراموشی رمز عبور؟"
+            android:textColor="@color/greenblue"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vorood" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="نمایش رمز عبور"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pass" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

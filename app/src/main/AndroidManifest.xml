@@ -14,11 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.account.AccountActivity" />
+        <activity android:name=".ui.Main.MainActivity" />
         <activity
-            android:name=".view.Main.Main2Activity"
+            android:name=".ui.Auth.AuthActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity android:name=".view.Main.MainActivity">
+        <activity android:name=".ui.intro.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
