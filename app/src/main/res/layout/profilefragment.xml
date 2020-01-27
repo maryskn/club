@@ -81,7 +81,7 @@
         android:fontFamily="@font/font"
         android:text="  ایمیل :"
         android:textColor="@color/darkblue"
-        app:layout_constraintBottom_toTopOf="@+id/changename"
+        app:layout_constraintBottom_toTopOf="@+id/CHANGENAME"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/customer"
@@ -142,31 +142,25 @@
         app:layout_constraintTop_toBottomOf="@+id/customer" />
 
     <Button
-        android:id="@+id/changepass"
+        android:id="@+id/CHANGENAME"
         android:layout_width="149dp"
         android:layout_height="43dp"
-        android:layout_marginStart="40dp"
         android:background="@drawable/button2"
         android:fontFamily="@font/font"
         android:text="  تغییر نام کاربری  "
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/changename"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/changename"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="619dp" />
 
     <Button
-        android:id="@+id/changename"
+        android:id="@+id/CHANGEPASS"
         android:layout_width="149dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="168dp"
         android:background="@drawable/changepass"
         android:fontFamily="@font/font"
         android:text="  تغییر رمز عبور  "
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
-        app:layout_constraintStart_toEndOf="@+id/changepass" />
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="619dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

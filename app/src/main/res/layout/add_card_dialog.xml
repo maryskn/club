@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="300dp"
+    android:layout_height="400dp">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="307dp"
+        android:layout_height="69dp"
+        android:background="@color/gray"
+        android:fontFamily="@font/font"
+        android:gravity="center|right"
+        android:text="   افزودن کارت جدید"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="229dp"
+        android:layout_height="46dp"
+        android:drawableRight="@drawable/bank"
+        android:fontFamily="@font/font"
+        android:text="  نام بانک"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.13999999" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="229dp"
+        android:layout_height="46dp"
+        android:drawableRight="@drawable/iconfinder_credit_card_debit_payment_2203532"
+        android:fontFamily="@font/font"
+        android:text="  شماره کارت"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText1"
+        app:layout_constraintVertical_bias="0.120000005" />
+
+    <EditText
+        android:id="@+id/expmonth"
+        android:layout_width="101dp"
+        android:layout_height="50dp"
+        android:drawableRight="@drawable/calendar"
+        android:fontFamily="@font/font"
+        android:text="  ماه انقضا"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toEndOf="@+id/expyear"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <EditText
+        android:id="@+id/expyear"
+        android:layout_width="101dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/font"
+        android:text="  سال انقضا"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintVertical_bias="0.419" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="219dp"
+        android:layout_height="32dp"
+        android:background="@drawable/button2"
+        android:fontFamily="@font/font"
+        android:text="تایید"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintVertical_bias="0.77" />
+</androidx.constraintlayout.widget.ConstraintLayout>

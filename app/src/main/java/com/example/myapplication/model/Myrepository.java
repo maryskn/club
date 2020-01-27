@@ -41,12 +41,12 @@ public class Myrepository {
 
                     @Override
                     public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
-                        Log.d("TAG", "onResponse response:: " + response);
+                        Log.w("TAG", "onResponse response:: " + response);
 
                         if (response.body() != null) {
                             data.setValue(response.body());
 
-                            Log.d("TAG", "result:: " + response.body().getResult());
+                            Log.w("TAG", "result:: "+ response.body().getResult());
 
                         }
                     }
@@ -54,26 +54,27 @@ public class Myrepository {
                     @Override
                     public void onFailure(Call<LoginResponseModel> call, Throwable t) {
                         data.setValue(null);
+                        Log.w("TAG", "fail ");
                     }
                 });
         return data;
 
     }
 
-    public LiveData<LoginResponseModel> Register(String phone, String name, String pass, String pass2) {
+    public LiveData<LoginResponseModel> Register(String phone, String nationalcode, String pass, String pass2) {
 
         final MutableLiveData<LoginResponseModel> data = new MutableLiveData<>();
-        apiRequest.userRegister(new RegisterRequestModel(phone,name, pass,pass2))
+        apiRequest.userRegister(new RegisterRequestModel(phone,nationalcode, pass,pass2))
                 .enqueue(new Callback<LoginResponseModel>() {
 
                     @Override
                     public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
-                        Log.d("TAG", "onResponse response:: " + response);
+                        Log.w("TAG", "onResponse response:: " + response);
 
                         if (response.body() != null) {
                             data.setValue(response.body());
 
-                            Log.d("TAG", "result:: " + response.body().getResult());
+                            Log.w("TAG", "result:: " + response.body().getResult());
 
                         }
                     }
@@ -81,7 +82,8 @@ public class Myrepository {
                     @Override
                     public void onFailure(Call<LoginResponseModel> call, Throwable t) {
                         data.setValue(null);
-                    }
+                        Log.w("TAG", "result:: " );
+                }
                 });
         return data;
 

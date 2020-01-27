@@ -13,9 +13,10 @@
         <action
             android:id="@+id/action_loginfragment_to_voroodfragment"
             app:destination="@id/voroodfragment" />
+
         <action
-            android:id="@+id/action_loginfragment_to_signupfragment"
-            app:destination="@id/signupfragment" />
+            android:id="@+id/action_loginfragment_to_verificationfragment"
+            app:destination="@id/verificationfragment" />
     </fragment>
     <fragment
         android:id="@+id/voroodfragment"
@@ -26,14 +27,7 @@
             android:id="@+id/action_voroodfragment_to_acountFragment"
             app:destination="@id/acountFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/signupfragment"
-        android:name="com.example.myapplication.view.Main.Signupfragment"
-        android:label="Signupfragment" >
-        <action
-            android:id="@+id/action_signupfragment_to_verificationfragment"
-            app:destination="@id/verificationfragment" />
-    </fragment>
+
     <fragment
         android:id="@+id/verificationfragment"
         android:name="com.example.myapplication.view.Main.Verificationfragment"
@@ -41,6 +35,9 @@
         <action
             android:id="@+id/action_verificationfragment_to_secondVerificationFragment"
             app:destination="@id/secondVerificationFragment" />
+        <action
+            android:id="@+id/action_verificationfragment_to_voroodfragment"
+            app:destination="@id/voroodfragment" />
     </fragment>
     <fragment
         android:id="@+id/acountFragment"

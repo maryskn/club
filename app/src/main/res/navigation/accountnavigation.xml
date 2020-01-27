@@ -72,17 +72,17 @@
         android:id="@+id/item1fragment"
         android:name="com.example.myapplication.view.account.ProfileFragment"
         android:label="item1fragment"
-        tools:layout="@layout/item1fragment" />
+        tools:layout="@layout/profilefragment" />
     <fragment
         android:id="@+id/item2fragment"
         android:name="com.example.myapplication.view.account.ManagecardFragment"
         android:label="item2fragment"
-        tools:layout="@layout/item2fragment" />
+        tools:layout="@layout/managecardfragment" />
     <fragment
         android:id="@+id/item3fragment"
         android:name="com.example.myapplication.view.account.CarnivalFragment"
         android:label="item3fragment"
-        tools:layout="@layout/item3fragment" />
+        tools:layout="@layout/carnival_fragment" />
     <fragment
         android:id="@+id/item4fragment"
         android:name="com.example.myapplication.view.account.ServisFragment"

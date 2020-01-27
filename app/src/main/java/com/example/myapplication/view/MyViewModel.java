@@ -16,6 +16,7 @@ public class MyViewModel extends ViewModel {
     public SignIn signIn;
     public Verification verification;
     private LiveData<LoginResponseModel> loginResponseModelLiveData;
+    private LiveData<LoginResponseModel> registerResponseModelLiveData;
 
     public MyViewModel() {
         signIn = null;
@@ -31,7 +32,6 @@ public class MyViewModel extends ViewModel {
             //signIn.onSuccess("خوش آمدید");
             this.loginResponseModelLiveData = myrepository.login(username, password);
         }
-
     }
 
 
@@ -40,31 +40,28 @@ public class MyViewModel extends ViewModel {
     }
 
     public void Register(String phone, String name, String pass, String pass2) {
+
         if (phone.equals("") || name.equals("") || pass.equals("") || pass2.equals("")) {
             verification.onError("لطفا اطلاعات را وارد کنید");
             return;
         }
-
-        else
-        {
-            verification.onSuccess("کد فعال سازی ارسال شد");
-            myrepository.Register(phone, name, pass, pass2);
+        if (phone.length() != 11) {
+            verification.onError("شماره تلفن همراه را درست وارد نمایید");
+            return;
 
         }
-
-    }
-    public void signUp(String nationalcode, String customernum, String email, String referenceCode) {
-        if (nationalcode.equals("") || email.equals("")) {
-            verification.onError("لطفا اطلاعات را وارد کنید");
+        if (!pass.equals(pass2)) {
+            verification.onError("رمز عبور را صحیح وارد نمایید");
             return;
         }
 
-        else
-        {
-            verification.onSuccess("");
-            myrepository.Register(nationalcode, customernum, email, referenceCode);
-        }
+        //verification.onSuccess("کد فعال سازی ارسال شد");
+        //this.registerResponseModelLiveData = myrepository.Register(phone, name, pass, pass2);
 
+
+    }
+    public LiveData<LoginResponseModel> getRegisterResponseModelLiveData() {
+        return registerResponseModelLiveData;
     }
 
     public List<User> getUser() {

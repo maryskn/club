@@ -1,5 +1,6 @@
 package com.example.myapplication.view.Main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +12,14 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
 import com.example.myapplication.R;
+import com.example.myapplication.model.remote.dto.LoginResponseModel;
 import com.example.myapplication.view.MyViewModel;
+import com.example.myapplication.view.account.AccountActivity;
 
 public class Verificationfragment extends Fragment implements Verification{
     EditText phonenum , username , password , againpassword;
@@ -41,6 +45,21 @@ public class Verificationfragment extends Fragment implements Verification{
                 String againpass = againpassword.getText().toString();
 
                 myviewmodel.Register(phone,user,pass,againpass);
+                myviewmodel.getRegisterResponseModelLiveData().observe(getActivity(), new Observer<LoginResponseModel>() {
+                    @Override
+                    public void onChanged(LoginResponseModel loginResponseModel) {
+                        if (loginResponseModel != null)
+                            if(loginResponseModel.getResult().equals("OK")) {
+                                Navigation.findNavController(view).navigate(R.id.action_verificationfragment_to_voroodfragment);
+
+                            } else {
+                                Toast.makeText(getActivity(),"اطلاعات معتبر نمی باشد",Toast.LENGTH_SHORT).show();
+
+                            }
+
+                        //Toast.makeText(getActivity(), loginResponseModel.getResult(), Toast.LENGTH_LONG).show();
+                    }
+                });
 
 
             }
@@ -50,14 +69,14 @@ public class Verificationfragment extends Fragment implements Verification{
 
     @Override
     public void onSuccess(String s) {
-       //Navigation.findNavController(view).navigate(R.id.action_verificationfragment_to_secondVerificationFragment);
-        Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
+        Navigation.findNavController(view).navigate(R.id.action_verificationfragment_to_secondVerificationFragment);
+        Toast.makeText(getActivity(),s, Toast.LENGTH_LONG).show();
 
     }
 
     @Override
     public void onError(String s) {
-        Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(),s, Toast.LENGTH_LONG).show();
 
     }
 }

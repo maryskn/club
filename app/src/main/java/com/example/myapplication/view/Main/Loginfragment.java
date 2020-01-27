@@ -34,7 +34,7 @@ public class Loginfragment extends Fragment {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_loginfragment_to_signupfragment);
+                Navigation.findNavController(v).navigate(R.id.action_loginfragment_to_verificationfragment);
             }
         });
         return view;
