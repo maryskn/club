@@ -11,20 +11,21 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import com.example.myapplication.R;
 import com.example.myapplication.view.ViewPagercarnivalAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 public class CarnivalFragment extends Fragment {
-    TableLayout tableLayout;
+    TabLayout tabLayout;
     ViewPager viewPager;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = getLayoutInflater().inflate(R.layout.carnival_fragment, container, false);
-        tableLayout = view.findViewById(R.id.Tabcarnival);
+        tabLayout = view.findViewById(R.id.Tabcarnival);
         viewPager = view.findViewById(R.id.Pagercarnival);
         ViewPagercarnivalAdapter adapter = new ViewPagercarnivalAdapter(getActivity().getSupportFragmentManager());
         viewPager.setAdapter(adapter);
-        tableLayout.setup;
+        tabLayout.setupWithViewPager(viewPager);
         return view;
     }
 }
