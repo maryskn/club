@@ -28,6 +28,7 @@ import com.example.myapplication.ui.Auth.SignIn;
 import com.example.myapplication.ui.Main.MainActivity;
 import com.example.myapplication.ui.MyViewModel;
 import com.example.myapplication.utils.Util;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONObject;
 
@@ -39,6 +40,7 @@ public class LoginFragment extends Fragment implements SignIn {
     private Button voorood, Accept;
     private TextView forget;
     private CheckBox checkBox;
+    AVLoadingIndicatorView progressBar;
     View view;
 
     @Nullable
@@ -47,6 +49,7 @@ public class LoginFragment extends Fragment implements SignIn {
         view = inflater.inflate(R.layout.login_fragment, container, false);
         final MyViewModel myviewmodel = ViewModelProviders.of(this).get(MyViewModel.class);
         myviewmodel.signIn = LoginFragment.this;
+        progressBar = view.findViewById(R.id.progressBar);
         Accept = view.findViewById(R.id.accept);
         name = view.findViewById(R.id.name);
         pass = view.findViewById(R.id.pass);
@@ -69,6 +72,7 @@ public class LoginFragment extends Fragment implements SignIn {
             @Override
             public void onClick(View v) {
 
+                progressBar.setVisibility(View.VISIBLE);
                 String userName = name.getText().toString();
                 String password = pass.getText().toString();
 
@@ -76,6 +80,9 @@ public class LoginFragment extends Fragment implements SignIn {
                 myviewmodel.getLoginResponseModelLiveData().observe(getActivity(), new Observer<Response<ResponseBody>>() {
                     @Override
                     public void onChanged(Response<ResponseBody> response) {
+                        progressBar.setVisibility(View.GONE);
+                        if (response == null)
+                            return;
 
                         if (response.code() == Constants.RES200) {
 

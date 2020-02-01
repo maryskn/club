@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/verificationfragment"
-        android:name="com.example.myapplication.ui.Auth.fragment.Verificationfragment"
+        android:name="com.example.myapplication.ui.Auth.fragment.Registerfragment"
         android:label="Verificationfragment" >
         <action
             android:id="@+id/action_verificationfragment_to_secondVerificationFragment"

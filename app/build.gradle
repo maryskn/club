@@ -42,7 +42,7 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:1.1.1"
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
 
-    // CicleImageView
+    // CircleImageView
     implementation 'de.hdodenhof:circleimageview:3.0.2'
 
     // Glide
@@ -56,5 +56,8 @@ dependencies {
 
     // okhttp logging interceptor
     implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+
+    //progressbar
+    implementation 'com.wang.avi:library:2.1.3'
 
 }

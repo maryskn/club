@@ -1,7 +1,6 @@
 package com.example.myapplication.model.remote;
 
 import com.example.myapplication.model.remote.dto.LoginRequestModel;
-import com.example.myapplication.model.remote.dto.LoginResponseModel;
 import com.example.myapplication.model.remote.dto.RegisterRequestModel;
 
 import okhttp3.ResponseBody;
@@ -18,7 +17,7 @@ public interface ApiRequest {
 
     @Headers({"Accept: application/json"})
     @POST("user/first-login")
-    Call<LoginResponseModel> userRegister(@Body RegisterRequestModel registerRequestModel);
+    Call<ResponseBody> userRegister(@Body RegisterRequestModel registerRequestModel);
 
 
 }

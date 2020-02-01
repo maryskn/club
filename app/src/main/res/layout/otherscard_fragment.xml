@@ -10,17 +10,15 @@
         android:id="@+id/addcard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="100dp"
         android:backgroundTint="@color/red"
         android:gravity="center"
         android:src="@drawable/plus"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.605"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text"
-        app:layout_constraintVertical_bias="0.503" />
+        app:layout_constraintTop_toBottomOf="@+id/expdate"
+        app:layout_constraintVertical_bias="0.49" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/imageview"
@@ -35,53 +33,45 @@
         android:id="@+id/delcard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginBottom="56dp"
         android:backgroundTint="@color/red"
         android:gravity="center"
         android:src="@drawable/garbage_copy_2"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintBottom_toBottomOf="@+id/addcard"
+        app:layout_constraintEnd_toStartOf="@+id/addcard"
+        app:layout_constraintHorizontal_bias="0.69"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text"
-        app:layout_constraintVertical_bias="0.83" />
+        app:layout_constraintTop_toTopOf="@+id/addcard" />
 
     <TextView
         android:id="@+id/bankname"
-        android:text="نام بانک :"
-        android:fontFamily="@font/font"
         android:layout_width="273dp"
         android:layout_height="52dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/font"
+        android:text="نام بانک :"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageview" />
 
     <TextView
         android:id="@+id/cardnum"
-        android:text="شماره کارت :"
-        android:fontFamily="@font/font"
         android:layout_width="267dp"
         android:layout_height="42dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/font"
+        android:text="شماره کارت :"
+        app:layout_constraintEnd_toEndOf="@+id/bankname"
+        app:layout_constraintStart_toStartOf="@+id/bankname"
         app:layout_constraintTop_toBottomOf="@+id/bankname" />
 
     <TextView
         android:id="@+id/expdate"
-        android:text="تاریخ انقضا :"
-        android:fontFamily="@font/font"
         android:layout_width="263dp"
         android:layout_height="40dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/font"
+        android:text="تاریخ انقضا :"
+        app:layout_constraintEnd_toEndOf="@+id/cardnum"
+        app:layout_constraintStart_toStartOf="@+id/cardnum"
         app:layout_constraintTop_toBottomOf="@+id/cardnum" />
 
 

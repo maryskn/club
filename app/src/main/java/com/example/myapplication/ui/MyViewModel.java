@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.myapplication.model.Myrepository;
 import com.example.myapplication.model.db.User;
-import com.example.myapplication.model.remote.dto.LoginResponseModel;
 import com.example.myapplication.ui.Auth.SignIn;
 import com.example.myapplication.ui.Auth.Verification;
 
@@ -19,7 +18,7 @@ public class MyViewModel extends ViewModel {
     public SignIn signIn;
     public Verification verification;
     private LiveData<Response<ResponseBody>> loginResponseModelLiveData;
-    private LiveData<LoginResponseModel> registerResponseModelLiveData;
+    private LiveData<Response<ResponseBody>> registerResponseModelLiveData;
 
     public MyViewModel() {
         signIn = null;
@@ -48,11 +47,12 @@ public class MyViewModel extends ViewModel {
             verification.onError("لطفا اطلاعات را وارد کنید");
             return;
         }
+
         if (phone.length() != 11) {
             verification.onError("شماره تلفن همراه را درست وارد نمایید");
             return;
-
         }
+
         if (!pass.equals(pass2)) {
             verification.onError("رمز عبور را صحیح وارد نمایید");
             return;
@@ -64,7 +64,7 @@ public class MyViewModel extends ViewModel {
 
     }
 
-    public LiveData<LoginResponseModel> getRegisterResponseModelLiveData() {
+    public LiveData<Response<ResponseBody>> getRegisterResponseModelLiveData() {
         return registerResponseModelLiveData;
     }
 

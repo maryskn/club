@@ -11,7 +11,6 @@ import com.example.myapplication.model.prefence.Myprefence;
 import com.example.myapplication.model.remote.ApiRequest;
 import com.example.myapplication.model.remote.RetrofitRequest;
 import com.example.myapplication.model.remote.dto.LoginRequestModel;
-import com.example.myapplication.model.remote.dto.LoginResponseModel;
 import com.example.myapplication.model.remote.dto.RegisterRequestModel;
 
 import java.util.List;
@@ -57,26 +56,24 @@ public class Myrepository {
 
     }
 
-    public LiveData<LoginResponseModel> Register(String phone, String nationalcode, String pass, String pass2) {
+    public LiveData<Response<ResponseBody>> Register(String phone, String nationalcode, String pass, String pass2) {
 
-        final MutableLiveData<LoginResponseModel> data = new MutableLiveData<>();
+        final MutableLiveData<Response<ResponseBody>> data = new MutableLiveData<>();
         apiRequest.userRegister(new RegisterRequestModel(phone, nationalcode, pass, pass2))
-                .enqueue(new Callback<LoginResponseModel>() {
+                .enqueue(new Callback<ResponseBody>() {
 
                     @Override
-                    public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                         Log.w("TAG", "onResponse response:: " + response);
 
                         if (response.body() != null) {
-                            data.setValue(response.body());
-
-                            Log.w("TAG", "result:: " + response.body().getResult());
+                            data.setValue(response);
 
                         }
                     }
 
                     @Override
-                    public void onFailure(Call<LoginResponseModel> call, Throwable t) {
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
                         data.setValue(null);
                         Log.w("TAG", "result:: ");
                     }
@@ -95,6 +92,6 @@ public class Myrepository {
     }
 
     public String getToken() {
-       return myprefence.getToken();
+        return myprefence.getToken();
     }
 }

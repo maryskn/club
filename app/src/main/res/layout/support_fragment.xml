@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/gray"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/ansarImage"
+        android:layout_width="115dp"
+        android:layout_height="109dp"
+        android:src="@drawable/psd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <TextView
+        android:id="@+id/clubCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font"
+        android:gravity="center"
+        android:text="باشگاه مشتریان انصار"
+        android:textColor="@color/red"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ansarImage"
+        app:layout_constraintStart_toStartOf="@+id/ansarImage"
+        app:layout_constraintTop_toBottomOf="@+id/ansarImage"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font"
+        android:gravity="center"
+        android:text="نیاز به کمک دارید ؟"
+        android:textColor="@color/greenblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/clubCustomer"
+        app:layout_constraintStart_toStartOf="@+id/clubCustomer"
+        app:layout_constraintTop_toBottomOf="@+id/clubCustomer"
+        app:layout_constraintVertical_bias="0.13999999" />
+
+    <Button
+        android:id="@+id/Call"
+        android:layout_width="319dp"
+        android:layout_height="56dp"
+        android:background="@drawable/button2"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/font"
+        android:text=" تماس با ما"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/help" />
+
+    <Button
+        android:id="@+id/Chat"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:background="@drawable/changepass"
+        android:fontFamily="@font/font"
+        android:text=" چت آنلاین"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Call"
+        app:layout_constraintStart_toStartOf="@+id/Call"
+        app:layout_constraintTop_toBottomOf="@+id/Call"
+        app:layout_constraintVertical_bias="0.19" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
