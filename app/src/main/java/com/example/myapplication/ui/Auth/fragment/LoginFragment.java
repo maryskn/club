@@ -40,14 +40,16 @@ public class LoginFragment extends Fragment implements SignIn {
     private Button voorood, Accept;
     private TextView forget;
     private CheckBox checkBox;
-    AVLoadingIndicatorView progressBar;
+    private AVLoadingIndicatorView progressBar;
+    private MyViewModel myviewmodel;
     View view;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.login_fragment, container, false);
-        final MyViewModel myviewmodel = ViewModelProviders.of(this).get(MyViewModel.class);
+        myviewmodel = ViewModelProviders.of(this).get(MyViewModel.class);
         myviewmodel.signIn = LoginFragment.this;
         progressBar = view.findViewById(R.id.progressBar);
         Accept = view.findViewById(R.id.accept);
@@ -75,44 +77,11 @@ public class LoginFragment extends Fragment implements SignIn {
                 progressBar.setVisibility(View.VISIBLE);
                 String userName = name.getText().toString();
                 String password = pass.getText().toString();
+                Intent account = new Intent(getActivity(), MainActivity.class);
+                startActivity(account);
+                getActivity().finish();
 
-                myviewmodel.login(userName, password);
-                myviewmodel.getLoginResponseModelLiveData().observe(getActivity(), new Observer<Response<ResponseBody>>() {
-                    @Override
-                    public void onChanged(Response<ResponseBody> response) {
-                        progressBar.setVisibility(View.GONE);
-                        if (response == null)
-                            return;
-
-                        if (response.code() == Constants.RES200) {
-
-                            myviewmodel.saveToken(response.headers().get("token"));
-
-                            Intent account = new Intent(getActivity(), MainActivity.class);
-                            startActivity(account);
-                            getActivity().finish();
-
-                        } else {
-                            try {
-
-                                JSONObject jsonObject = new JSONObject(response.errorBody().string());
-                                final String s = jsonObject.getString("customMsg");
-
-                                Log.w(Constants.TAG, s);
-
-                                Util.showToast(getActivity(), s);
-
-
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
-
-
-                        }
-                    }
-
-                });
-
+                //myviewmodel.login(userName, password);
 
             }
         });
@@ -144,17 +113,47 @@ public class LoginFragment extends Fragment implements SignIn {
 
     @Override
     public void onSuccess(String s) {
-        //TODO define Intent
-        Intent account = new Intent(getActivity(), MainActivity.class);
-        startActivity(account);
-        //Navigation.findNavController(view).navigate(R.id.action_voroodfragment_to_acountFragment);
-        Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
+        /*myviewmodel.getLoginResponseModelLiveData().observe(getActivity(), new Observer<Response<ResponseBody>>() {
+            @Override
+            public void onChanged(Response<ResponseBody> response) {
+                progressBar.setVisibility(View.GONE);
+                if (response == null)
+                    return;
+
+                if (response.code() == Constants.RES200) {
+
+                    myviewmodel.saveToken(response.headers().get("token"));
+
+                    Intent account = new Intent(getActivity(), MainActivity.class);
+                    startActivity(account);
+                    getActivity().finish();
+
+                } else {
+                    try {
+
+                        JSONObject jsonObject = new JSONObject(response.errorBody().string());
+                        final String s = jsonObject.getString("customMsg");
+
+                        Log.w(Constants.TAG, s);
+
+                        Util.showToast(getActivity(), s);
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+
+                }
+            }
+
+        }); */
 
     }
 
     @Override
     public void onError(String s) {
-        Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
-
+       /* Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
+        progressBar.setVisibility(View.GONE); */
     }
 }

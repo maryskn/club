@@ -58,7 +58,7 @@ public class Myrepository {
 
     public LiveData<Response<ResponseBody>> Register(String phone, String nationalcode, String pass, String pass2) {
 
-        final MutableLiveData<Response<ResponseBody>> data = new MutableLiveData<>();
+        final MutableLiveData<Response<ResponseBody>> data1 = new MutableLiveData<>();
         apiRequest.userRegister(new RegisterRequestModel(phone, nationalcode, pass, pass2))
                 .enqueue(new Callback<ResponseBody>() {
 
@@ -67,18 +67,18 @@ public class Myrepository {
                         Log.w("TAG", "onResponse response:: " + response);
 
                         if (response.body() != null) {
-                            data.setValue(response);
+                            data1.setValue(response);
 
                         }
                     }
 
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        data.setValue(null);
+                        data1.setValue(null);
                         Log.w("TAG", "result:: ");
                     }
                 });
-        return data;
+        return data1;
 
     }
 

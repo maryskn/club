@@ -30,9 +30,10 @@ public class ManagecardFragment extends Fragment {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
         pager.setAdapter(adapter);
         tabs.setupWithViewPager(pager);
-setCustomFont();
+        setCustomFont();
         return view;
     }
+
     public void setCustomFont() {
 
         ViewGroup vg = (ViewGroup) tabs.getChildAt(0);

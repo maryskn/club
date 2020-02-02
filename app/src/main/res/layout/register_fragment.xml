@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:drawableRight="@drawable/user_copy"
         android:fontFamily="@font/font"
-        android:hint="  شماره ملی"
+        android:hint="  ایمیل"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="@+id/phone"
         app:layout_constraintStart_toStartOf="@+id/phone"

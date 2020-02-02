@@ -15,8 +15,12 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.example.myapplication.Constants;
 import com.example.myapplication.R;
+//import com.example.myapplication.ui.Auth.Pattern;
 import com.example.myapplication.ui.Auth.Verification;
 import com.example.myapplication.ui.MyViewModel;
 import com.wang.avi.AVLoadingIndicatorView;
@@ -25,16 +29,17 @@ import okhttp3.ResponseBody;
 import retrofit2.Response;
 
 public class Registerfragment extends Fragment implements Verification {
-    EditText phonenum, username, password, againpassword;
-    Button sendmessage;
-    View view;
-    AVLoadingIndicatorView avLoadingIndicatorView;
+    private EditText phonenum, username, password, againpassword;
+    private Button sendmessage;
+    private View view;
+    private AVLoadingIndicatorView avLoadingIndicatorView;
+    private MyViewModel myviewmodel;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.register_fragment, container, false);
-        final MyViewModel myviewmodel = ViewModelProviders.of(this).get(MyViewModel.class);
+        myviewmodel = ViewModelProviders.of(this).get(MyViewModel.class);
         myviewmodel.verification = Registerfragment.this;
         avLoadingIndicatorView = view.findViewById(R.id.avloading);
         phonenum = view.findViewById(R.id.phone);
@@ -52,26 +57,6 @@ public class Registerfragment extends Fragment implements Verification {
                 String againpass = againpassword.getText().toString();
 
                 myviewmodel.Register(phone, user, pass, againpass);
-                myviewmodel.getRegisterResponseModelLiveData().observe(getActivity(), new Observer<Response<ResponseBody>>() {
-                    @Override
-                    public void onChanged(Response<ResponseBody> response) {
-                        avLoadingIndicatorView.setVisibility(View.GONE);
-
-                        if (response == null)
-                            return;
-
-                        if (response.code() == Constants.RES200) {
-                            Navigation.findNavController(view).navigate(R.id.action_verificationfragment_to_voroodfragment);
-
-                        } else {
-                            Toast.makeText(getActivity(), "اطلاعات معتبر نمی باشد", Toast.LENGTH_SHORT).show();
-
-                        }
-
-                        //Toast.makeText(getActivity(), loginResponseModel.getResult(), Toast.LENGTH_LONG).show();
-                    }
-                });
-
 
             }
         });
@@ -80,13 +65,31 @@ public class Registerfragment extends Fragment implements Verification {
 
     @Override
     public void onSuccess(String s) {
-        Navigation.findNavController(view).navigate(R.id.action_verificationfragment_to_secondVerificationFragment);
-        Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
+
+        myviewmodel.getRegisterResponseModelLiveData().observe(getActivity(), new Observer<Response<ResponseBody>>() {
+            @Override
+            public void onChanged(Response<ResponseBody> response) {
+                avLoadingIndicatorView.setVisibility(View.GONE);
+
+                if (response == null)
+                    return;
+
+                if (response.code() == Constants.RES200) {
+                    Navigation.findNavController(view).navigate(R.id.action_verificationfragment_to_voroodfragment);
+
+                } else {
+                    Toast.makeText(getActivity(), "اطلاعات معتبر نمی باشد", Toast.LENGTH_SHORT).show();
+
+                }
+
+            }
+        });
 
     }
 
     @Override
     public void onError(String s) {
+        avLoadingIndicatorView.setVisibility(View.GONE);
         Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
 
     }

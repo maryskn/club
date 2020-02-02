@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -22,16 +21,31 @@
         android:layout_width="376dp"
         android:layout_height="127dp"
         android:fontFamily="@font/font"
+        android:gravity="center"
         android:text="سلام، من از اپلیکیشن باشگاه مشتریان بانک انصار استفاده میکنم و پیشنهاد میکنم شما هم این اپلیکیشن رو نصب کنید و در جشنواره ها و خدمات ویژه این باشگاه شرکت کنید. لینک دانلود اپلیکیشن رو در ادامه ارسال میکنم :
-https://ansarclub.com/download
 "
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="15dp"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:id="@+id/linktext"
+        app:layout_constraintBottom_toTopOf="@+id/invitebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        app:layout_constraintVertical_bias="0.13999999" />
+
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/invitebutton"
         android:layout_width="261dp"
         android:layout_height="60dp"
         android:background="@drawable/button2"

@@ -2,14 +2,11 @@ package com.example.myapplication.ui;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
-
 import com.example.myapplication.model.Myrepository;
 import com.example.myapplication.model.db.User;
 import com.example.myapplication.ui.Auth.SignIn;
 import com.example.myapplication.ui.Auth.Verification;
-
 import java.util.List;
-
 import okhttp3.ResponseBody;
 import retrofit2.Response;
 
@@ -29,10 +26,9 @@ public class MyViewModel extends ViewModel {
     public void login(String username, String password) {
         if (username.equals("") || password.equals("")) {
             signIn.onError("لطفا اطلاعات را وارد کنید");
-            return;
         } else {
-            //signIn.onSuccess("خوش آمدید");
             this.loginResponseModelLiveData = myrepository.login(username, password);
+            signIn.onSuccess("");
         }
     }
 
@@ -41,9 +37,9 @@ public class MyViewModel extends ViewModel {
         return loginResponseModelLiveData;
     }
 
-    public void Register(String phone, String nationalcode, String pass, String pass2) {
+    public void Register(String phone, String email, String pass, String pass2) {
 
-        if (phone.equals("") || nationalcode.equals("") || pass.equals("") || pass2.equals("")) {
+        if (phone.equals("") || email.equals("") || pass.equals("") || pass2.equals("")) {
             verification.onError("لطفا اطلاعات را وارد کنید");
             return;
         }
@@ -58,9 +54,9 @@ public class MyViewModel extends ViewModel {
             return;
         }
 
-        //verification.onSuccess("کد فعال سازی ارسال شد");
-        this.registerResponseModelLiveData = myrepository.Register(phone, nationalcode, pass, pass2);
 
+        this.registerResponseModelLiveData = myrepository.Register(phone, email, pass, pass2);
+        verification.onSuccess("");
 
     }
 

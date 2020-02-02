@@ -45,7 +45,7 @@
         android:label="AcountFragment" />
     <fragment
         android:id="@+id/secondVerificationFragment"
-        android:name="com.example.myapplication.ui.Auth.fragment.SecondVerificationFragment"
+        android:name="com.example.myapplication.ui.Auth.fragment.VerificationFragment"
         android:label="secondverification_fragment"
-        tools:layout="@layout/secondverification_fragment" />
+        tools:layout="@layout/verification_fragment" />
 </navigation>

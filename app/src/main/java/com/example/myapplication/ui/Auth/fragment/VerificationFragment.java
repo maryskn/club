@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
 
-public class SecondVerificationFragment extends Fragment {
+public class VerificationFragment extends Fragment {
     TextView textView,textView2;
     Button button;
     EditText editText;
@@ -22,7 +22,7 @@ public class SecondVerificationFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.secondverification_fragment,container,false);
+        View view=inflater.inflate(R.layout.verification_fragment,container,false);
         textView2= view.findViewById(R.id.again);
         return view;
     }
